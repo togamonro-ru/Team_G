@@ -1,0 +1,103 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.contributorform{
+    position: absolute;
+    top:  50%;
+    left:  50%;
+    transform: translateY(-50%) translateX(-50%);
+    margin-top: 100px;
+}
+
+.contant{
+    border: 2px solid #ebeff7;
+    border-radius: 0.67em;
+    line-height: 1.2;
+    font-size: 1em;
+}
+
+.titlediv{
+    margin-top: 20px;
+}
+
+.title{
+    width: 620px;
+    height: 30px;
+    border: 2px solid #ebeff7;
+    border-radius: 0.67em;
+    line-height: 1.2;
+    font-size: 1em;
+}
+
+.contantdiv{
+    margin-top: 20px;
+}
+
+.releasediv{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.post{
+    width: 100px;
+    padding: 7px;
+    background-color: #ebeff7;
+    border: 0.5px solid #000000;
+    border-radius: 0.67em;
+}
+
+.postdiv{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.file{
+    margin-top: 20px;
+}
+
+.contributorheader{
+    background-color: #ebeff7;
+}
+
+.contributorheader h1{
+    margin-top: 0;
+    padding: 10px;
+}
+
+.contributorfooter{
+    margin-top: 50%;
+    margin-left: 49%;
+    margin-bottom: 10px;
+}
+
+.contributorfooter a{
+    text-decoration: none;
+    color: black;
+}
+
+.delete{
+    text-align: right;
+    margin-right: 20px;
+}
+
+.delete button{
+    width: 100px;
+    padding: 7px;
+    background-color: #ffffff;
+    border: 0.5px solid #ff0000;
+    color: #ff0000;
+    border-radius: 0.67em;
+}
+
+.editfooter{
+    margin-top: 46%;
+    margin-left: 49%;
+    margin-bottom: 10px;
+}
+
+.editfooter a{
+    text-decoration: none;
+    color: black;
+}
