@@ -7,28 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>閲覧ページ</title>
-    <link href="browse.css" rel="stylesheet">
-    <style>
-        .header{
-                display: flex;
-                background-color: aqua;
-                border-bottom : solid 3px red;
-         }
-
-        .login{
-                margin-left: auto;
-        }
-
-        .register{
-                margin-right: 0;
-        }
-
-        .box{
-            margin-top: 10%;
-            width: fit-content;
-            border: solid 1px red;
-        }
-    </style>
+    <link href="css/browse.css?<?php echo date('YmdHis'); ?>" rel="stylesheet">
 </head>
 <body>
     <div class = "header">

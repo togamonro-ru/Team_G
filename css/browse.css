@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    display: flex;
+    background-color: #ebeff7;
+}
+
+.header h1{
+    margin: 0;
+    padding: 10px;
+}
+
+.login{
+    margin-left: auto;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+.login button{
+    width: 100px;
+    padding: 7px;
+    background-color: #ffffff;
+    border: 0.5px solid #000000;
+    border-radius: 0.67em;
+}
+
+.register{
+    margin-right: 20px;
+    padding: 10px;
+}
+
+.register button{
+    width: 100px;
+    padding: 7px;
+    background-color: #ffffff;
+    border: 0.5px solid #000000;
+    border-radius: 0.67em;
+}
+
+.box{
+margin-top: 10%;
+width: fit-content;
+border: solid 1px red;
+}
