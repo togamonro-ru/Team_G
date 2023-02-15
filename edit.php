@@ -1,4 +1,6 @@
-<?php?>
+<?php
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +36,7 @@
             非公開<input type="radio" name="release" class="release"><br>
         </div>
         <div class="postdiv">
-            <input type="submit" value="投稿" class="post">
+            <input type="submit" value="編集" class="post">
         </div>
     </form>
 
