@@ -8,8 +8,8 @@
         $name = $_SESSION['name'];
 
     }
-    if(isset($_SESSION['pass'])){
-        $pw = $_SESSION['pass'];
+    if(isset($_SESSION['password'])){
+        $pw = $_SESSION['password'];
 
     }
 
@@ -38,18 +38,22 @@
 </head>
 <body>
     <header>    
-        <h1><a href = "#">title</a></h1>
+        <h1><a href = "browse.php">title</a></h1>
     </header>
 
-    <form action = "confirm.php" method = "post">
-        お名前<br>
-        <input type = "text" name = "name" value = "<?php echo $name ?>"><br>
+    <div class = "form">
+        <form action = "confirm.php" method = "post">
+            お名前<br>
+            <input type = "text" name = "name" value = "<?php echo $name ?>"><br>
 
-        パスワード<br>
-        <input type = "password" name = "pass" value = "<?php echo $pw ?>"><br>
+            パスワード<br>
+            <input type = "password" name = "password"><br>
 
-        <input type = "submit" value = "次へ">
-    </form>
-    <a href = "login.php">ログイン</a>
+            <input type = "submit" value = "次へ" class = "btn">
+        </form>
+    </div>
+    <div class = "link">    
+        <a href = "login.php">ログイン</a>
+    </div>
 </body>
 </html>

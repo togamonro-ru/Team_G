@@ -1,11 +1,11 @@
 <?php
     session_start();
+    require_once 'db_connect.php';
 
     $error = false;
 
-    $_SESSION['name'] = $_POST['name'];
-    $_SESSION['pass'] = $_POST['pass'];
-
+    $name = $_POST['name'];
+    $pw = $_POST['password'];
 
     if(empty($name)){
         $error = true;
@@ -17,26 +17,20 @@
         $_SESSION['error_password'] = "パスワードを入力してください。";
     }
 
-    // require_once 'db_connect.php';
+    if($error){
+        header("Location: Register.php");
+    }
 
-    // $name = $_POST['name'];
-    // $pw = $_POST['pass'];
+    $sql = " insert into user (name, password) values(:name, :password)";
 
-    // $sql = " insert into user (name, pass) values(:name, :pass)";
+    // プリペアードステートメントを作成する
+    $stm = $pdo->prepare($sql);
 
-    // // プリペアードステートメントを作成する
-    // $stm = $pdo->prepare($sql);
-
-    // // プレースホルダに値をバインドする
-    // $stm->bindValue(':name',$name,PDO::PARAM_STR);
-    // $stm->bindValue(':pass',$age,PDO::PARAM_INT);
-    // // SQL文を実行する
-    // $stm->execute();
-
-    // if($error){
-    //     header("Location: Register.php");
-    // }
-
+    // プレースホルダに値をバインドする
+    $stm->bindValue(':name',$name,PDO::PARAM_STR);
+    $stm->bindValue(':password',$pw,PDO::PARAM_INT);
+    // SQL文を実行する
+    $stm->execute();
     
 ?>
 
@@ -49,22 +43,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "css/Confirm.css">
     <title>確認画面</title>
 </head>
 <body>
     <header>    
-        <h3><a href = "#">title</a></h3>
+        <h1><a href = "browse.php">title</a></h1>
     </header>
+    <div class = "confirm">
+        <form action = "login.php" method = "post">
+            お名前<br>
+            <?php echo $name?><br>
 
-    <form action = "login.php" method = "post">
-        お名前<br>
-        <?php echo $_POST['name']?><br>
+            パスワード<br>
+            <?php echo $pw?><br>
 
-        パスワード<br>
-        <?php echo $_POST['pass']?><br>
+            <input type = "submit" value = "登録" class = "btn"><br>
+        </from>
+    </div>
 
-        <input type = "submit" value = "登録"><br>
-    </form>
-    <a href = "Register.php">戻る</a>
+    <div class = "link">    
+        <a href = "Register.php">戻る</a>
+    </div>
 </body>
 </html>
