@@ -12,6 +12,19 @@ body{
     padding: 10px;
 }
 
+.edit{
+    text-align: right;
+    padding: 10px;
+}
+
+.edit button{
+    width: 100px;
+    padding: 7px;
+    background-color: #ebeff7;
+    border: 0.5px solid #000000;
+    border-radius: 0.67em;
+}
+
 .image{
     margin: 20px;
 }
