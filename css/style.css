@@ -31,6 +31,26 @@ body{
     font-size: 1em;
 }
 
+input[type="file"] {
+    display: none;
+}
+
+#app label {
+    cursor: pointer;
+}
+
+#app label img{
+    margin-top: 20px;
+    width: 50px;
+    height:50px;
+    border-radius:50%;
+    background-color: #bababa;
+}
+
+#app p{
+    margin: 0 0 0 0;
+}
+
 .contantdiv{
     margin-top: 20px;
 }
@@ -67,7 +87,7 @@ body{
 }
 
 .contributorfooter{
-    margin-top: 50%;
+    margin-top: 53%;
     margin-left: 49%;
     margin-bottom: 10px;
 }
