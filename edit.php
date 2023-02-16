@@ -18,8 +18,11 @@
         <button>削除</button>
     </div>
     <form action="" class="contributorform">
-        <div class="file">
-            <input type="file" name="images"><br>
+    <div id="app">
+            <label>
+                <input type="file" name="file"><img src="img/icon.png" alt="アイコン" class="images">
+            </label>
+            <p>選択されていません</p>
         </div>
         <div class="titlediv">
             <label>タイトル<br>
@@ -43,5 +46,8 @@
     <footer class="editfooter">
         <a href="#">戻る</a>
     </footer>
+
+    <script src="js/3.4.1-jquery.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
