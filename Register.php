@@ -41,6 +41,11 @@
         <h1><a href = "browse.php">title</a></h1>
     </header>
 
+    <!-- <div class="error">
+        <h4><?php echo $_SESSION['error_name']; ?></h4>
+        <h4><?php echo $_SESSION['error_password']; ?></h4>
+    </div> -->
+
     <div class = "form">
         <form action = "confirm.php" method = "post">
             <div class="information">

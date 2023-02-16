@@ -47,7 +47,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "css/login.css">
+    <link rel = "stylesheet" href = "css/login.css?<?php echo date('YmdHis'); ?>">
     <title>ログイン画面</title>
 </head>
 <body>
@@ -57,13 +57,15 @@
 
     <div class = "login">
         <form action = "login.php" method = "post">
-            お名前<br>
-            <input type = "text" name = "name"><br>
+            <div class="information">
+                お名前<br>
+                <input type = "text" name = "name" class="name"><br>
 
-            パスワード<br>
-            <input type = "password" name = "password"><br>
+                パスワード<br>
+                <input type = "password" name = "password" class="pw"><br>
 
-            <input type = "submit" value = "ログイン" class = "btn">
+                <input type = "submit" value = "ログイン" class = "btn">
+            </div>
         </form>
     </div>
     <div class = "link">
