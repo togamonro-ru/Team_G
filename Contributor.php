@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="contributorheader">
-        <h1>title</h1>
+        <h1><a href="browse.php">title</a></h1>
     </header>
     <form action="" class="contributorform">
         <div id="app">

@@ -7,6 +7,15 @@ h1{
     padding: 10px;
 }
 
+h1 a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.errer{
+    display: flex;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -65,4 +74,5 @@ body{
     padding: 30px;
     border: 1.5px solid #000000;
     border-radius: 1rem;
+    background-color: #EBEFF7;
 }

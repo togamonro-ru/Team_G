@@ -12,6 +12,11 @@ body{
     padding: 10px;
 }
 
+.title h1 a{
+    text-decoration: none;
+    color: black;
+}
+
 .edit{
     text-align: right;
     padding: 10px;
