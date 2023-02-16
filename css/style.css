@@ -12,7 +12,7 @@ body{
 }
 
 .contant{
-    border: 2px solid #ebeff7;
+    border: 2px solid #c6d6f7;
     border-radius: 0.67em;
     line-height: 1.2;
     font-size: 1em;
@@ -25,7 +25,7 @@ body{
 .title{
     width: 620px;
     height: 30px;
-    border: 2px solid #ebeff7;
+    border: 2px solid #c6d6f7;
     border-radius: 0.67em;
     line-height: 1.2;
     font-size: 1em;
@@ -112,7 +112,7 @@ input[type="file"] {
 }
 
 .editfooter{
-    margin-top: 46%;
+    margin-top: 48%;
     margin-left: 49%;
     margin-bottom: 10px;
 }

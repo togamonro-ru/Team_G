@@ -12,8 +12,8 @@
 <body>
     <div class = "header">
         <h1>title</h1>
-        <div class = "login"><button onclick="location.href='./#'">ログイン</button></div>
-        <div class = "register"><button onclick="location.href='./#'">新規登録</button></div>
+        <div class = "login"><button onclick="location.href='login.php'">ログイン</button></div>
+        <div class = "register"><button onclick="location.href='Register.php'">新規登録</button></div>
     </div>
 
     <div class="box">
