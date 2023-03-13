@@ -1,3 +1,8 @@
+<?php
+session_start();
+$user_id=$_SESSION['user_id'];
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -14,5 +19,6 @@
         <div class="browse"><button onclick="location.href='browse.php'">ログアウト</button></div>
     </div>
     <p>ログイン画面です</p>
+    <p><?php echo $user_id; ?></p>
 </body>
 </html>
