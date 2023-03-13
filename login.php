@@ -25,18 +25,17 @@
 
         // SQL文を実行する
         $stm->execute();
-        
         // 結果を配列として取得する
         $user = $stm->fetch(PDO::FETCH_ASSOC);
 
         if($user['name'] === $name&&$user['password'] === $pw){
            header("Location: admin.php");
+           $_SESSION['user_id'] = $user['id'];
         } else {
             $_SESSION['error'] = "名前もしくはパスワードが違います。";
             echo $_SESSION['error'];
         }
     }
-   
 ?>
 
 
@@ -51,7 +50,7 @@
     <title>ログイン画面</title>
 </head>
 <body>
-    <header>    
+    <header>
         <h1><a href = "browse.php">title</a></h1>
     </header>
 
