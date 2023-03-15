@@ -6,13 +6,19 @@
     session_start();
     require_once 'db_connect.php';
 
+    $sql = "INSERT INTO image (name) VALUES ('')";
+    $pdo->exec($sql);
+
+    // 最後に挿入されたIDを取得する
+    $last_id = $pdo->lastInsertId();
+
     if(isset($_FILES['file']))
      {
-        var_dump($_FILES);
         // ファイルを一時的に保存するためのディレクトリを指定する
         $target_dir = "./uploads/";
         // ファイル名を取得する
         $file_name = basename($_FILES["file"]["name"]);
+        $file_name = $last_id . $file_name;
         // ファイルのフルパスを取得する
         $target_file = $target_dir . $file_name;
         // ファイルを移動する
@@ -58,6 +64,6 @@
 </head>
 <body>
     <h1>投稿しました</h1>
-    <a href="">戻る</a>
+    <a href="admin.php">戻る</a>
 </body>
 </html>
