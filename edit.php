@@ -19,6 +19,7 @@
         } else {
             $release[0] = "checked";
         }
+    }
 
     if(!empty($_POST)){
         $sql = "INSERT INTO image (name) VALUES ('')";
@@ -52,8 +53,9 @@
 
         $stm->execute();
 
-        header("Location: admin.php"); 
+        header("Location: admin.php");
     }
+
     }
     if(isset($_GET['delid'])){
         $delete_ID = $_GET['delid'];
@@ -71,7 +73,6 @@
 
         header("Location: admin.php");
     }
-    
 ?>
 <!DOCTYPE html>
 <html lang="ja">

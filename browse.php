@@ -1,4 +1,12 @@
 <?php
+    session_start();
+    require_once 'db_connect.php';
+
+    $sql =  "SELECT * FROM post WHERE release_flg = 1";
+
+    $stm = $pdo->prepare($sql);
+
+    $stm->execute();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,9 +23,15 @@
         <div class = "login"><button onclick="location.href='login.php'">ログイン</button></div>
         <div class = "register"><button onclick="location.href='Register.php'">新規登録</button></div>
     </div>
-
-    <div class="box">
-        <a href = "#">タイトル</a>
-    </div>
+<?php foreach ($stm as $row) {?>
+<table border="1">
+    <tr>
+        <td><a href="edit.php?id=' <?php echo $row['id'] ?> '"><img src="<?php echo $row['imgpass'] ?>" alt="画像"></a></td>
+    </tr>
+    <tr>
+        <td><a href="edit.php"><?php echo $row['title'] ?></a></td>
+    </tr>
+    <?php }?>
+</table>
 </body>
 </html>
