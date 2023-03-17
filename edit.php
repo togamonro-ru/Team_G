@@ -21,7 +21,7 @@
         }
 
     }
-    
+
 
     if(!empty($_POST)){
         $title = $_POST['title'];
@@ -50,9 +50,9 @@
         // SQL文を実行する
         $stm->execute();
 
-        header("Location: admin.php"); 
+        header("Location: admin.php");
     }
-    
+
 ?>
 <!DOCTYPE html>
 <html lang="ja">
