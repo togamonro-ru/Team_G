@@ -55,19 +55,18 @@
 
         header("Location: admin.php");
     }
-
     if(isset($_GET['delid'])){
         $delete_ID = $_GET['delid'];
         $delete = 0;
-        
+
         $sql = "UPDATE post set delete_flg = :delete_flg where id = :id";
-        
+
         $stm = $pdo->prepare($sql);
 
         $stm->bindValue(':id',$delete_ID,PDO::PARAM_INT);
         $stm->bindValue(':delete_flg',$delete,PDO::PARAM_BOOL);
-        
-        
+
+
         $stm->execute();
 
         header("Location: admin.php");

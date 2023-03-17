@@ -1,4 +1,20 @@
 <?php
+require_once 'db_connect.php';
+if(isset($_GET['id'])){
+    $id = $_GET['id'];
+    $sql = "SELECT * FROM post where id = :id";
+    $stm = $pdo->prepare($sql);
+    $stm->bindValue(':id',$id,PDO::PARAM_INT);
+    $stm->execute();
+
+    $result = $stm->fetch(PDO::FETCH_ASSOC);
+
+    $sql = "SELECT user.name FROM post INNER JOIN user ON post.user_id = user.id";
+    $stm = $pdo->prepare($sql);
+    $stm->execute();
+
+    $user = $stm->fetch(PDO::FETCH_ASSOC);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,13 +30,13 @@
         <h1><a href="browse.php">title</a></h1>
     </div>
     <div class ="image">
-        <img src="img/gogo1.png" alt="">
+        <img src="<?php echo $result['imgpass']; ?>" alt="">
     </div>
 
     <div class="detail">
-        <h2>タイトル</h2>
-        <h3>投稿者名</h3>
-        <p>内容</p>
+        <h2><?php echo $result['title']; ?></h2>
+        <h3><?php echo $user['name']; ?></h3>
+        <p><?php echo $result['description']; ?></p>
     </div>
     <div class="links">
         <a href="#">←前の記事へ</a>
