@@ -55,8 +55,6 @@
 
         header("Location: admin.php");
     }
-
-
     if(isset($_GET['delid'])){
         $delete_ID = $_GET['delid'];
         $delete = 0;
