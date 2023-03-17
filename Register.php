@@ -13,6 +13,7 @@
 
     }
 
+    if(!empty($_POST)){
     //名前入力エラーがあった場合はエラーを表示する
     if(isset($_SESSION['error_name'])){
         echo $_SESSION['error_name'];
@@ -22,6 +23,7 @@
     if(isset($_SESSION['error_password'])){
         echo $_SESSION['error_password'];
 
+    }
     }
 ?>
 

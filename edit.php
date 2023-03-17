@@ -19,14 +19,17 @@
         } else {
             $release[0] = "checked";
         }
-
     }
 
-
     if(!empty($_POST)){
+        $sql = "INSERT INTO image (name) VALUES ('')";
+        $pdo->exec($sql);
+
+        // 最後に挿入されたIDを取得する
+        $last_id = $pdo->lastInsertId();
+
         $title = $_POST['title'];
         $contant = $_POST['contant'];
-        $error = true;
         if(isset($_POST["release"])){
             $release = $_POST["release"];
         }
@@ -37,22 +40,39 @@
             move_uploaded_file($_FILES["file"]["tmp_name"], $target_file);
         }
 
-        $sql = "UPDATE post set imgname = :imgname, imgpass = :imgpass, title = :title, description = :description, release_flg = :release_flg where id = :id";
+        $sql = "UPDATE post set imgname = :imgname, imgpass = :imgpass,title = :title, description = :description, release_flg = :release_flg where id = :id";
 
         $stm = $pdo->prepare($sql);
 
-        // プレースホルダに値をバインドする
         $stm->bindValue(':imgname',$file_name,PDO::PARAM_STR);
         $stm->bindValue(':imgpass',$target_file,PDO::PARAM_STR);
         $stm->bindValue(':title',$title,PDO::PARAM_STR);
         $stm->bindValue(':description',$contant,PDO::PARAM_STR);
         $stm->bindValue(':release_flg',$release,PDO::PARAM_BOOL);
-        // SQL文を実行する
+        $stm->bindValue(':id',$id,PDO::PARAM_INT);
+
         $stm->execute();
 
         header("Location: admin.php");
     }
 
+    }
+    if(isset($_GET['delid'])){
+        $delete_ID = $_GET['delid'];
+        $delete = 0;
+        
+        $sql = "UPDATE post set delete_flg = :delete_flg where id = :id";
+        
+        $stm = $pdo->prepare($sql);
+
+        $stm->bindValue(':id',$delete_ID,PDO::PARAM_INT);
+        $stm->bindValue(':delete_flg',$delete,PDO::PARAM_BOOL);
+        
+        
+        $stm->execute();
+
+        header("Location: admin.php");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -68,12 +88,12 @@
         <h1><a href="browse.php">title</a></h1>
     </header>
     <div class="delete">
-        <button onclick="location.href='admin.php'">削除</button>
+        <a href = "edit.php?delid=<?php echo $id;?>">削除</a>
     </div>
-    <form action="edit.php" class="contributorform" enctype = "multipart/form-data" method = "post">
+    <form action="edit.php?id=<?php echo $id;?>" class="contributorform" enctype = "multipart/form-data" method = "post">
             <div id="app">
                 <label>
-                    <input type="file" name="file"><?php echo $result['imgname'];?><img src="img/icon.png" alt="アイコン" class="images">
+                    <input type="file" name="file"><img src="img/icon.png" alt="アイコン" class="images">
                 </label>
                 <p>選択されていません</p>
             </div>

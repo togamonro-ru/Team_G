@@ -20,8 +20,8 @@
          $stm = $pdo->prepare($sql);
 
         // プレースホルダに値をバインドする
-        $stm->bindValue(':name',$name,PDO::PARAM_INT);
-        $stm->bindValue(':password',$pw,PDO::PARAM_INT);
+        $stm->bindValue(':name',$name,PDO::PARAM_STR);
+        $stm->bindValue(':password',$pw,PDO::PARAM_STR);
 
         // SQL文を実行する
         $stm->execute();
