@@ -2,7 +2,7 @@
     session_start();
     require_once 'db_connect.php';
 
-    $sql =  "SELECT * FROM post WHERE release_flg = 1";
+    $sql =  "SELECT * FROM post WHERE release_flg = 1 and delete_flg = 1";
 
     $stm = $pdo->prepare($sql);
 
@@ -26,11 +26,12 @@
 <?php foreach ($stm as $row) {?>
 <table border="1">
     <tr>
-        <td><a href="edit.php?id=' <?php echo $row['id'] ?> '"><img src="<?php echo $row['imgpass'] ?>" alt="画像"></a></td>
+        <td><a href="detail.php?id=<?php echo $row['id'] ?>"><img src="<?php echo $row['imgpass'] ?>" alt="画像"></a></td>
     </tr>
     <tr>
-        <td><a href="edit.php"><?php echo $row['title'] ?></a></td>
+        <td><a href="detail.php"><?php echo $row['title'] ?></a></td>
     </tr>
+</table>
     <?php }?>
 </table>
 </body>

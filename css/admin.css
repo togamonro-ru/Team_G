@@ -44,3 +44,12 @@ body{
     border: 0.5px solid #000000;
     border-radius: 0.67em;
 }
+td img{
+    height: 300px;
+    width: 280px;
+}
+
+td a{
+    text-decoration: none;
+    color: #000000;
+}
