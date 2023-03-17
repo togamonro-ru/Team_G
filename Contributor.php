@@ -38,7 +38,7 @@
     </form>
 
     <footer class="contributorfooter">
-        <a href="#">戻る</a>
+        <a href="admin.php">戻る</a>
     </footer>
 
     <script src="js/3.4.1-jquery.min.js"></script>
