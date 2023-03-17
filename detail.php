@@ -40,7 +40,7 @@ if(isset($_GET['id'])){
     </div>
     <div class="links">
         <a href="#">←前の記事へ</a>
-        <button onclick="location.href='./#'">戻る</button>
+        <button onclick="location.href='browse.php'">戻る</button>
         <a href="#">次の記事へ→</a>
     </div>
 </body>
