@@ -50,3 +50,8 @@ margin-top: 10%;
 width: fit-content;
 border: solid 1px red;
 }
+
+td img{
+    height: 300px;
+    width: 280px;
+}
