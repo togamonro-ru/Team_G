@@ -27,7 +27,7 @@
 <?php foreach ($stm as $row) {?>
 <table border="1">
     <tr>
-        <td><a href="edit.php"><img src="<?php echo $row['imgpass'] ?>" alt="画像"></a></td>
+        <td><a href='edit.php?id="$row["id"]"'><img src="<?php echo $row['imgpass'] ?>" alt="画像"></a></td>
     </tr>
     <tr>
         <td><a href="edit.php"><?php echo $row['title'] ?></a></td>
