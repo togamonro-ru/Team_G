@@ -1,12 +1,12 @@
 <?php
 session_start();
-$user_id=$_SESSION['user_id'];
+    $user_id=$_SESSION['user_id'];
     require_once 'db_connect.php';
-
-    $sql =  "SELECT * FROM post WHERE release_flg = 1 and delete_flg = 1";
+ 
+    $sql =  "SELECT * FROM post WHERE delete_flg = 1 and user_id = :id" ;
 
     $stm = $pdo->prepare($sql);
-
+    $stm->bindValue(':id',$user_id,PDO::PARAM_INT);
     $stm->execute();
 ?>
 
