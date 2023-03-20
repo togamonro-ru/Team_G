@@ -39,9 +39,33 @@ if(isset($_GET['id'])){
         <p><?php echo $result['description']; ?></p>
     </div>
     <div class="links">
-        <a href="#">←前の記事へ</a>
+        <?php 
+            //前の記事
+            //データベースから公開されていて削除されていないデータを取得する
+            //今見ている記事のIDより小さいID
+            $sql = "SELECT id FROM post where release_flg = 1 and delete_flg = 1 and id < :id ORDER BY id desc LIMIT 1 ";
+            $stm = $pdo->prepare($sql);
+            $stm->bindValue(':id',$id,PDO::PARAM_INT);
+            $stm->execute();
+            $result = $stm->fetch(PDO::FETCH_ASSOC);
+        ?>
+        <?php if($result){
+            echo '<a href="detail.php?id='.$result['id'].'">←前の記事へ</a>';
+        }?>
         <button onclick="location.href='browse.php'">戻る</button>
-        <a href="#">次の記事へ→</a>
+        <?php 
+            //次の記事
+            //データベースから公開されていて削除されていないデータを取得する
+            //今見ている記事のIDより大きいID
+            $sql = "SELECT id FROM post where release_flg = 1 and delete_flg = 1 and id > :id LIMIT 1 ";
+            $stm = $pdo->prepare($sql);
+            $stm->bindValue(':id',$id,PDO::PARAM_INT);
+            $stm->execute();
+            $result = $stm->fetch(PDO::FETCH_ASSOC);
+        ?>
+        <?php if($result){
+            echo '<a href="detail.php?id='.$result['id'].'">次の記事へ→</a>';
+        }?>
     </div>
 </body>
 </html>
