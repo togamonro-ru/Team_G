@@ -39,7 +39,7 @@ if(isset($_GET['id'])){
         <p><?php echo $result['description']; ?></p>
     </div>
     <div class="links">
-        <?php 
+        <?php
             //前の記事
             //データベースから公開されていて削除されていないデータを取得する
             //今見ている記事のIDより小さいID

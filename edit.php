@@ -29,7 +29,7 @@
         $last_id = $pdo->lastInsertId();
 
         $title = $_POST['title'];
-        $contant = $_POST['contant'];
+        $contant = nl2br($_POST['contant']);
         if(isset($_POST["release"])){
             $release = $_POST["release"];
         }
