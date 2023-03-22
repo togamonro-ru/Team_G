@@ -36,6 +36,7 @@
         if(isset($_FILES['file'])){
             $target_dir = "./uploads/";
             $file_name = basename($_FILES["file"]["name"]);
+            $file_name = $last_id . $file_name;
             $target_file = $target_dir . $file_name;
             move_uploaded_file($_FILES["file"]["tmp_name"], $target_file);
         }
@@ -91,7 +92,7 @@
     <form action="edit.php?id=<?php echo $id;?>" class="contributorform" enctype = "multipart/form-data" method = "post">
             <div id="app">
                 <label>
-                    <input type="file" name="file"><img src="img/icon.png" alt="アイコン" class="images">
+                    <input type="file" name="file" value = "<?php echo $result['imgpass']; ?>"><img src="img/icon.png" alt="アイコン" class="images">
                 </label>
                 <p>選択されていません</p>
             </div>
