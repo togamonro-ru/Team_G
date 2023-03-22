@@ -31,7 +31,7 @@
     }
     if(isset($_POST['contant']))
     {
-        $contant=$_POST['contant'];
+        $contant=nl2br($_POST['contant']);
     }
     if(isset($_POST['release']))
     {
