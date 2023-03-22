@@ -107,9 +107,13 @@ input[type="file"] {
     margin-right: 20px;
 }
 
-.delete button{
+.delete a{
+    text-decoration: none;
     width: 100px;
-    padding: 7px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 7px;
+    padding-bottom: 7px;
     background-color: #ffffff;
     border: 0.5px solid #ff0000;
     color: #ff0000;

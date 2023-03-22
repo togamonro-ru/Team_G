@@ -25,18 +25,14 @@ session_start();
         <div class="Contributor"><button onclick="location.href='Contributor.php'">投稿</button></div>
         <div class="browse"><button onclick="location.href='browse.php'">ログアウト</button></div>
     </div>
-    <p>ログイン画面です</p>
-    <p><?php echo $user_id; ?></p>
 
-    <?php foreach ($stm as $row) {?>
-<table border="1">
-    <tr>
-        <td><a href="edit.php?id=<?php echo $row['id'] ?>"><img src="<?php echo $row['imgpass'] ?>" alt="画像"></a></td>
-    </tr>
-    <tr>
-        <td><a href="edit.php"><?php echo $row['title'] ?></a></td>
-    </tr>
-</table>
-    <?php }?>
+<div class="select">
+<?php foreach ($stm as $row) {?>
+    <div class="article">
+        <a href="edit.php?id=<?php echo $row['id'] ?>"><img src="<?php echo $row['imgpass'] ?>" alt="画像"></a>
+        <a href="edit.php?id=<?php echo $row['id'] ?>"><?php echo $row['title'] ?></a>
+    </div>
+<?php }?>
+</div>
 </body>
 </html>
