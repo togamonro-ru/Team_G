@@ -9,7 +9,7 @@
     $stm->execute();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,16 +23,14 @@
         <div class = "login"><button onclick="location.href='login.php'">ログイン</button></div>
         <div class = "register"><button onclick="location.href='Register.php'">新規登録</button></div>
     </div>
+<div class="select">
 <?php foreach ($stm as $row) {?>
-<table border="1">
-    <tr>
-        <td><a href="detail.php?id=<?php echo $row['id'] ?>"><img src="<?php echo $row['imgpass'] ?>" alt="画像"></a></td>
-    </tr>
-    <tr>
-        <td><a href="detail.php"><?php echo $row['title'] ?></a></td>
-    </tr>
-</table>
-    <?php }?>
+    <div class="article">
+        <a href="detail.php?id=<?php echo $row['id'] ?>"><img src="<?php echo $row['imgpass'] ?>" alt="画像"></a>
+        <a href="detail.php"><?php echo $row['title'] ?></a>
+    </div>
+<?php }?>
+</div>
 </table>
 </body>
 </html>

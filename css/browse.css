@@ -51,12 +51,27 @@ width: fit-content;
 border: solid 1px red;
 }
 
-td img{
-    height: 300px;
-    width: 280px;
+.select{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-td a{
+.article {
+    border: 2px solid #d3e1fc;
+    margin: 10px;
+    padding: 10px;
+    width: 22.4%;
+    text-align: center;
+}
+
+.article img{
+    height: 300px;
+    width: 280px;
+    object-fit: cover;
+}
+
+.article a{
     text-decoration: none;
     color: #000000;
 }
