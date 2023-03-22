@@ -27,7 +27,7 @@
 <?php foreach ($stm as $row) {?>
     <div class="article">
         <a href="detail.php?id=<?php echo $row['id'] ?>"><img src="<?php echo $row['imgpass'] ?>" alt="画像"></a>
-        <a href="detail.php"><?php echo $row['title'] ?></a>
+        <a href="detail.php?id=<?php echo $row['id'] ?>"><?php echo $row['title'] ?></a>
     </div>
 <?php }?>
 </div>
