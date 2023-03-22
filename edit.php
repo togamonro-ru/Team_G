@@ -87,7 +87,7 @@
         <h1><a href="browse.php">title</a></h1>
     </header>
     <div class="delete">
-        <a href = "edit.php?delid=<?php echo $id;?>">削除</a>
+        <a href = "edit.php?delid=<?php echo $id;?>" onclick="return confirm('この記事を削除しますか？')">削除</a>
     </div>
     <form action="edit.php?id=<?php echo $id;?>" class="contributorform" enctype = "multipart/form-data" method = "post">
             <div id="app">
