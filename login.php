@@ -28,9 +28,10 @@
         // 結果を配列として取得する
         $user = $stm->fetch(PDO::FETCH_ASSOC);
 
-        if($user['name'] === $name&&$user['password'] === $pw){
-           header("Location: admin.php");
-           $_SESSION['user_id'] = $user['id'];
+        if($user){
+            $_SESSION['user_id'] = $user['id'];
+            header("Location: admin.php");
+            exit();
         } else {
             $_SESSION['error'] = "名前もしくはパスワードが違います。";
             echo $_SESSION['error'];
