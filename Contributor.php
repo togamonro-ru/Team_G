@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="contributorheader">
-        <h1><a href="browse.php">title</a></h1>
+    <a href="browse.php"><img src="img/MyNails.png" alt="ロゴ"></a>
     </header>
     <form action="postconfirmation.php" class="contributorform" method = "post" enctype="multipart/form-data">
         <div id="app">

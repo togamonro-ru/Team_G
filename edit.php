@@ -83,8 +83,8 @@
     <link rel="stylesheet" href="css/style.css?<?php echo date('YmdHis'); ?>">
 </head>
 <body>
-    <header class="contributorheader">
-        <h1><a href="browse.php">title</a></h1>
+<header class="contributorheader">
+    <a href="browse.php"><img src="img/MyNails.png" alt="ロゴ"></a>
     </header>
     <div class="delete">
         <a href = "edit.php?delid=<?php echo $id;?>" onclick="return confirm('この記事を削除しますか？')">削除</a>

@@ -51,10 +51,11 @@
     <title>ログイン画面</title>
 </head>
 <body>
-    <header>
-        <h1><a href = "browse.php">title</a></h1>
-    </header>
-
+<header>
+    <div class ="title">
+        <a href="browse.php"><img src="img/MyNails.png" alt="ロゴ"></a>
+    </div>
+</header>
     <div class = "login">
         <form action = "login.php" method = "post">
             <div class="information">

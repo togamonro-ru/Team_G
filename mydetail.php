@@ -10,8 +10,8 @@
     <link href="css/detail.css?<?php echo date('YmdHis'); ?>" rel="stylesheet">
 </head>
 <body>
-    <div class ="title">
-    <h1><a href="browse.php">title</a></h1>
+<div class ="title">
+        <a href="browse.php"><img src="img/MyNails.png" alt="ロゴ"></a>
     </div>
 
     <div class="edit">
