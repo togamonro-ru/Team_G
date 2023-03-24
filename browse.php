@@ -7,6 +7,17 @@
     $stm = $pdo->prepare($sql);
 
     $stm->execute();
+
+    //セッションの破棄
+    $_SESSION = [];
+
+    //セッションの鍵を削除する
+    if(isset($_COOKIE[session_name()])){
+        setcookie(session_name(),'',time() -1800);
+    }
+
+    //セッションファイルの破棄
+    session_destroy();
 ?>
 <!DOCTYPE html>
 <html lang="ja">
