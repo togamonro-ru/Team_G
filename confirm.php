@@ -47,9 +47,11 @@
     <title>確認画面</title>
 </head>
 <body>
-    <header>    
-        <h1><a href = "browse.php">title</a></h1>
-    </header>
+<header>
+    <div class ="title">
+        <a href="browse.php"><img src="img/MyNails.png" alt="ロゴ"></a>
+    </div>
+</header>
     <div class = "confirm">
         <form action = "login.php" method = "post">
             お名前<br>

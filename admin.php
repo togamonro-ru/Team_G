@@ -21,7 +21,9 @@ session_start();
 </head>
 <body>
     <div class="header">
-        <h1><a href = "browse.php">title</a></h1>
+    <div class ="title">
+        <a href="browse.php"><img src="img/MyNails.png" alt="ロゴ"></a>
+    </div>
         <div class="Contributor"><button onclick="location.href='Contributor.php'">投稿</button></div>
         <div class="browse"><button onclick="location.href='browse.php'">ログアウト</button></div>
     </div>

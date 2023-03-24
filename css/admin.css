@@ -24,6 +24,18 @@ body{
     padding: 10px;
 }
 
+.title a img{
+    margin-left: 20px;
+    height: 70px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.title a{
+    text-decoration: none;
+    color: black;
+}
+
 .Contributor button{
     width: 100px;
     padding: 7px;

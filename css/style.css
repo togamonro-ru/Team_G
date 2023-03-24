@@ -81,11 +81,6 @@ input[type="file"] {
     background-color: #ebeff7;
 }
 
-.contributorheader h1{
-    margin-top: 0;
-    padding: 10px;
-}
-
 .contributorheader h1 a{
     text-decoration: none;
     color: black;
@@ -105,6 +100,7 @@ input[type="file"] {
 .delete{
     text-align: right;
     margin-right: 20px;
+    margin-top: 15px;
 }
 
 .delete a{
@@ -121,12 +117,24 @@ input[type="file"] {
 }
 
 .editfooter{
-    margin-top: 48%;
+    margin-top: 50%;
     margin-left: 49%;
     margin-bottom: 10px;
 }
 
 .editfooter a{
+    text-decoration: none;
+    color: black;
+}
+
+.contributorheader a img{
+    margin-left: 20px;
+    height: 60px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.title a{
     text-decoration: none;
     color: black;
 }

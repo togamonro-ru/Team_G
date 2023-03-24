@@ -39,9 +39,11 @@
     <title>新規登録画面</title>
 </head>
 <body>
-    <header>
-        <h1><a href = "browse.php">title</a></h1>
-    </header>
+<header>
+    <div class ="title">
+        <a href="browse.php"><img src="img/MyNails.png" alt="ロゴ"></a>
+    </div>
+</header>
 
     <!-- <div class="error">
         <h4><?php echo $_SESSION['error_name']; ?></h4>
