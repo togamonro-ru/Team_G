@@ -29,15 +29,19 @@ if(isset($_GET['id'])){
     <div class ="title">
         <h1><a href="browse.php">title</a></h1>
     </div>
+<div class="main">
     <div class ="image">
         <img src="<?php echo $result['imgpass']; ?>" alt="">
     </div>
 
     <div class="detail">
-        <h2><?php echo $result['title']; ?></h2>
-        <h3><?php echo $user['name']; ?></h3>
+        <div class="detailhed">
+            <h2><?php echo $result['title']; ?></h2>
+            <h3><?php echo $user['name']; ?></h3>
+        </div>
         <p><?php echo $result['description']; ?></p>
     </div>
+</div>
     <div class="links">
         <?php
             //前の記事
