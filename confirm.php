@@ -56,7 +56,7 @@
             <?php echo $name?><br>
 
             パスワード<br>
-            <?php echo $pw?><br>
+            *****<br>
 
             <input type = "submit" value = "登録" class = "btn"><br>
         </from>
